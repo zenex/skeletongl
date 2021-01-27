@@ -1,0 +1,90 @@
+#+Title: [[https://xenobyte.xyz/projects/?nav=skeletongl][SkeletonGL]]: Performance focused "2.5D" game engine
+#+Author: SENEX @ XENOBYTE.XYZ
+#+OPTIONS: \n:t
+
+[[http://www.gnu.org/licenses/gpl-3.0.html][http://img.shields.io/:license-mit-blue.svg]]
+
+#+html: <p align="center"><img src="https://data.whicdn.com/images/287949138/original.gif" /></p>
+
+
+* About SkeletonGL
+  SkeletonGL is a fully featured 2D rendering engine written in C++ with a focus on performance and flexibility, it
+  offers a template to immediately begin working on the essential elements of the application without having to first write 
+  universal, core features.
+
+  The framework provides everything needed to create visual applications while abstracting away OpenGL's shortcomings, the API
+  is optimized to allow for absolute control without injecting unnecessary dependencies, making the compiled static library
+  less than 4 MBs.
+  
+  The code base is very compact and easily modifiable to fit any particular project, it also includes fully featured debugging 
+  tools for the underlying OpenGL drivers making it a complete solution for computer graphics programming.
+  All modern OpenGL rendering capabilities are available, making it a more complete alternative to SDL's 2D renderer
+  while providing a very similar interface, its just as easy to use but with the added benefit of everything a proper
+  engine has to offer. If you're looking for a complete, yet unobtrusive solution for PC game development, SkeletonGL is for you.
+
+* Dependencies
+  - [[https://glm.g-truc.net/][glm]] // included
+  - [[https://github.com/nothings/stb/blob/master/stb_image.h][stb_image]] // included
+  - [[https://www.freetype.org/][freetype]]
+  - [[http://glew.sourceforge.net/][glew]]
+  - [[https://www.libsdl.org/][SDL2]]
+    
+
+* Installation
+
+  1. Install dependencies
+
+  For Debia/Ubuntu systems:
+  #+BEGIN_SRC 
+  sudo apt-get update
+  sudo apt-get install libsdl2-dev libglew-dev libfreetype6-dev
+  #+END_SRC
+  For Arch based systems:
+  #+BEGIN_SRC 
+  sudo pacman -S sdl2 glew freetype2
+  #+END_SRC
+
+  2. Clone the SkeletonGL repo:
+
+  #+BEGIN_SRC 
+  git clone [[https://github.com/zenex/skeletongl][https://github.com/zenex/skeletongl]]
+  cd skeletongl/
+  make
+  ./sgl
+  #+END_SRC
+
+
+* Documentation
+
+  The source code is thoroughly documented using the doxygen standard, any doxygen generator can parse the code and output the API's specification into a portable format of your choosing.
+  The root folder contents are already setup as a template for new projects, simply add your own source code to the /src/ folder and update the makefile: 
+  
+  Root project folder:
+  #+BEGIN_SRC 
+    ■ src/: Source code folder
+    ■ static_lib: Compile the SGL insto a static (.a) library
+    ■ static_exe: Statically compile the sgl.a lib into the final executable
+    ■ makefile: Dynamically compile the final executable
+    ■ skeletongl.ini: Runtime settings file
+  #+END_SRC
+  
+  src/ code folder:
+  #+BEGIN_SRC 
+    ■ skeletongl/: SkeletonGL library source code
+    ■ skeletongl/skeletonGL.hpp: Monolithic include file
+    ■ skeletongl/window/: Window manager and main library interface
+    ■ skeletongl/renderer/: All render and OpenGL related code
+    ■ skeletongl/utility: Data structures, constants and general utility
+    ■ skeletongl/deps: Header only dependencies (GLM & stb_image)
+  #+END_SRC
+
+  Note that the entire SkeletonGL interface can be seen in the window/window.hpp file.
+
+  Visit the official project site at [[https://xenobyte.xyz/projects/?nav=skeletongl][XENOBYTE.XYZ]] for more information.
+  
+* Example programs
+  The following programs are made in SkeletonGL and free for you to tinker with.
+
+  [[https://xenobyte.xyz/projects/?nav=snake-sgl][Snake-SGL]] // Simple snake clone and first SkeletonGL example program
+
+  [[https://xenobyte.xyz/projects/?nav=cas-sgl][CAS-SGL]]   // Conway's game of life simulator made in SkeletonGL & C++ with a focus on performance.
