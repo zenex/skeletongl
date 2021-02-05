@@ -2,7 +2,6 @@
 #+Author: SENEX @ XENOBYTE.XYZ
 #+OPTIONS: \n:t
 
-[[http://www.gnu.org/licenses/gpl-3.0.html][http://img.shields.io/:license-mit-blue.svg]]
 
 #+html: <p align="center"><img src="https://data.whicdn.com/images/287949138/original.gif" /></p>
 
