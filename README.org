@@ -46,7 +46,7 @@
   2. Clone the SkeletonGL repo:
 
   #+BEGIN_SRC 
-  git clone [[https://github.com/zenex/skeletongl][https://github.com/zenex/skeletongl]]
+  git clone https://git.xenobyte.xyz/XENOBYTE/skeletongl
   cd skeletongl/
   make
   ./sgl
