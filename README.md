@@ -60,14 +60,14 @@ graphics engine should. If you're looking for a complete, yet unobtrusive soluti
     cd skeletongl/
     make
     ./sgl
-    ```
+    ``**
 
 ## Documentation
 
 The source code is thoroughly documented using the doxygen standard, any doxygen generator can parse the code and output the API's specification into a portable format of your choosing.
 The root folder contents are already setup as a template for new projects, simply add your own source code to the /src/ folder and update the makefile: 
   
-Root project folder:
+**Root project folder:**
 
 
 * src/: Source code folder
