@@ -39,7 +39,7 @@ graphics engine should. If you're looking for a complete, yet unobtrusive soluti
 
 1. Install dependencies
 
-For Debia/Ubuntu systems:
+    For Debia/Ubuntu systems:
 
 
     ```sh
@@ -48,11 +48,12 @@ For Debia/Ubuntu systems:
 
     ```
 
-For Arch based systems:
+    For Arch based systems:
 
     ```sh
     sudo pacman -S sdl2 glew freetype2
     ```
+    
 2. Clone the SkeletonGL repo:
 
     ```sh
