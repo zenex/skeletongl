@@ -45,7 +45,6 @@ graphics engine should. If you're looking for a complete, yet unobtrusive soluti
     ```sh
     sudo apt-get update
     sudo apt-get install libsdl2-dev libglew-dev libfreetype6-dev
-
     ```
 
     For Arch based systems:
@@ -71,25 +70,22 @@ The root folder contents are already setup as a template for new projects, simpl
 Root project folder:
 
 
-    ```sh
-    ■ src/: Source code folder
-    ■ static_lib: Compile the SGL insto a static (.a) library
-    ■ static_exe: Statically compile the sgl.a lib into the final executable
-    ■ makefile: Dynamically compile the final executable
-    ■ skeletongl.ini: Runtime settings file
-    ```
-    
+* src/: Source code folder
+* static_lib: Compile the SGL insto a static (.a) library
+* static_exe: Statically compile the sgl.a lib into the final executable
+* makefile: Dynamically compile the final executable
+* skeletongl.ini: Runtime settings file
+
+
 **src/ code folder:**
 
+* skeletongl/: SkeletonGL library source code
+* skeletongl/skeletonGL.hpp: Monolithic include file
+* skeletongl/window/: Window manager and main library interface
+* skeletongl/renderer/: All render and OpenGL related code
+* skeletongl/utility: Data structures, constants and general utility
+* skeletongl/deps: Header only dependencies (GLM & stb_image)
 
-    ```sh
-    ■ skeletongl/: SkeletonGL library source code
-    ■ skeletongl/skeletonGL.hpp: Monolithic include file
-    ■ skeletongl/window/: Window manager and main library interface
-    ■ skeletongl/renderer/: All render and OpenGL related code
-    ■ skeletongl/utility: Data structures, constants and general utility
-    ■ skeletongl/deps: Header only dependencies (GLM & stb_image)
-    ```
 
 Note that the entire SkeletonGL interface can be seen in the window/window.hpp file.
 Visit the official project site at [xenobyte.xyz](https://xenobyte.xyz/projects/?nav=skeletongl) for more information.
